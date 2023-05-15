@@ -1,0 +1,43 @@
+index.html
+  x  Build a form
+  x  2 number inputs
+  x  4 button inputs: +, -, *, / <- choose one
+  x  = button (submit)
+  x  'C' button
+
+client.js
+  x  bring in jQuery
+  x  set up event listner for = button
+
+  x  event handler for = button
+  x      prevent default
+  x      take user input (num1, num2, opperation)
+  x      (Note, users should only click one button - note to self)
+  x      Turn the input into an object
+  x      Send the object as a POST request to the server  * up to this point, I'm in client land
+            ...
+  x      Do a GET inside the .then of our POST
+  x           to get the history of equations
+  x              take the equation history from the response
+  x              update the DOM.
+
+    set up event listner for 'C' button
+
+    event handler for 'C' button
+        prevent default
+        clear input fields (num1, num2, opperation)
+
+
+server.js
+
+  x  POST route
+  x      Take my equation obeject: (num1, num2, opperation)
+  x          Do math stuff....?
+  x              add, multipy, etc...
+  x          Add the equation to the store of equations array, at the end!
+  x          Send back the "OK"
+
+  x  GET route
+  x      send back the full list of equations, in order of oldest to newest
+
+
